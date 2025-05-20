@@ -64,6 +64,15 @@ if __name__ == "__main__":
     print(f"\n🥧 Your {digits_after_decimal} Pies are ready! 🥧\n")
     print(formatted_pi)
 
+    # Clear the bakedfood.txt file before baking
+    with open("bakedfood.txt", "w") as f:
+        pass
+
+    # Save the baked Pi to a file
+    with open("bakedfood.txt", "w") as f:
+        f.write(formatted_pi)
+    print(f"\n(Pi has been served in 'bakedfood.txt' for your enjoyment!)")
+
     # Taste test (verification)
     actual_digits_printed = len(formatted_pi.split('.')[1])
     print(f"\nTaste test: Number of digits after the decimal point: {actual_digits_printed}")
@@ -72,4 +81,3 @@ if __name__ == "__main__":
     else:
         print("Oops! This pie is a little off. Back to the kitchen!")
 
-    
